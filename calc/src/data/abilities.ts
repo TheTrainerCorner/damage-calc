@@ -326,8 +326,32 @@ const SV = SS.concat([
   'Wind Rider',
   'Zero to Hero',
 ]);
+const TTC = SS.concat([
+'Vampire',
+'Leg Day',
+'Elemental',
+'Baller',
+"Nature's Gift",
+'Garbage Disposal',
+'Versitility',
+'Phototaxis',
+'Radiating Light',
+'Mighty Fire',
+'Silent Water',
+'Clean Up',
+'Artillery',
+'Fish Buffet',
+'Bug OUt',
+'Battle Pride',
+'Plunder',
+'Pig Out',
+'Neurophysics',
+'Terraforming',
+'Inner Solstice',
+'Hammer Down',
+]);
 
-export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
+export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV, TTC];
 
 export class Abilities implements I.Abilities {
   private readonly gen: I.GenerationNum;

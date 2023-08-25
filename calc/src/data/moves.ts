@@ -40,6 +40,8 @@ export interface MoveData {
   readonly isPulse?: boolean;
   readonly isSlicing?: boolean;
   readonly isWind?: boolean;
+  readonly isKick?: boolean;
+  readonly isHammer?: boolean;
 }
 
 const RBY: {[name: string]: MoveData} = {
@@ -4763,6 +4765,51 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     target: 'allAdjacentFoes',
   },
 };
+const TTC_Patch: {[name: string]: DeepPartial<MoveData>} = {
+  'Snuggle': {
+    bp: 30,
+    category: "Physical",
+    type: 'Fairy',
+  },
+  'Gust' : {
+    bp: 50,
+    priority: 1,
+  },
+  'Present': {
+    bp: 50,
+  },
+  shelter: {
+    priority: 3,
+  },
+  'Diamond Storm': {
+    category: "Special",
+  },
+  'Beak Blast': {
+    priority: 1,
+  },
+  'Wicked Blow': {
+    bp: 70,
+  },
+  'Fillet Away': {
+    mindBlownRecoil: true,
+  },
+  'Zippy Zap': {
+    bp: 50,
+  },
+  'Night Daze': {
+    bp: 80,
+  },
+  'Tera Hammer': {
+    type: 'Normal',
+    bp: 80,
+    category: 'Physical',
+  },
+  'Sushi Typhoon': {
+    type: 'Water',
+    category: 'Special',
+    bp: 150,
+  },
+}
 
 const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH);
 
